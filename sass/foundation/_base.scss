@@ -1,0 +1,8 @@
+@use "../global/forward" as*;
+
+body {
+	font-size: 16px;
+	color: $text-color;
+	font-family: "Noto Sans JP", sans-serif;
+	line-height: 1.8;
+}
