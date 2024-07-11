@@ -1,0 +1,84 @@
+@use "../global/forward" as*;
+
+
+.form-box {
+	background: $main-color;
+	width: 400px;
+	padding: 8px 0 28px 0;
+	line-height: 1;
+}
+
+.bubble-text {
+	width: 384px;
+	height: 52px;
+	background: $accent-color;
+	border-radius: 5px;
+	margin-inline: auto;
+	color: $main-color;
+	font-size: 20px;
+	font-weight: bold;
+	display: grid;
+	place-content: center;
+	position: relative;
+
+	&::after {
+		content: "";
+		background: $accent-color;
+		width: 16px;
+		height: 16px;
+		clip-path: polygon(0 0, 50% 100%, 100% 0);
+		position: absolute;
+		top: 52px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.form {
+	padding-inline: 16px;
+}
+
+.form-item {
+	margin-top: 15px;
+
+	&:nth-child(1) {
+		margin-top: 24px;
+		display: flex;
+		gap: 18px;
+
+		.form-text {
+			width: 175px;
+		}
+	}
+}
+
+.form-label {
+	font-size: 14px;
+	font-weight: bold;
+
+	sup {
+		color: rgba(249, 0, 0, 1);
+
+	}
+}
+
+.form-text {
+	height: 48px;
+	width: 368px;
+	background: rgba(245, 248, 250, 1);
+	border: 1px solid rgba(206, 212, 218, 1);
+	border-radius: 5px;
+	padding: 16px 8px;
+	margin-top: 8px;
+}
+
+.form-notes {
+	margin-top: 24px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.btn-item {
+	text-align: center;
+	margin-top: 31px;
+}

@@ -1,0 +1,22 @@
+@use "../global/forward" as*;
+
+.doc-request {
+	height: 240px;
+	background: url(../img/background-4876988_1280\ 1.jpg);
+	text-align: center;
+	display: grid;
+	place-content: center;
+
+	.doc-request__text {
+		color: $main-color;
+		font-size: 24px;
+	}
+
+	.doc-request-btn {
+		margin-top: 24px;
+		background: $main-color;
+		color: $accent-color;
+		margin-inline: auto;
+	}
+}
+

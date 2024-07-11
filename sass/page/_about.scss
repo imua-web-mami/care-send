@@ -1,0 +1,39 @@
+@use "../global/forward" as*;
+
+.about {
+	padding: 50px 0 48px 0;
+
+	.section-title {
+		line-height: 1.5;
+	}
+}
+
+.about__text {
+	margin-top: 51px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+
+	span {
+		font-size: 32px;
+		color: $accent-color;
+	}
+}
+
+.about__img-box {
+	margin-top: 45px;
+	background: $bg-color;
+	width: 808px;
+	height: 276px;
+	margin-inline: auto;
+	position: relative;
+
+	img {
+		width: 562px;
+		height: 316px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

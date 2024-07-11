@@ -1,0 +1,13 @@
+@use "../global/forward" as*;
+
+
+.doc-request-btn {
+	width: 320px;
+	height: 52px;
+	cursor: pointer;
+	background: $accent-color;
+	border-radius: 25px;
+	color: $main-color;
+	font-size: 20px;
+	font-weight: bold;
+}

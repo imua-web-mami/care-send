@@ -1,0 +1,53 @@
+@use "../global/forward" as*;
+
+.feature {
+	.inner {
+		padding: 48px 20px 31px 20px;
+	}
+
+	.section-title {
+		line-height: 1.5;
+	}
+}
+
+.feature__list {
+	margin-top: 51px;
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.feature__item {
+	width: 480px;
+	height: 325px;
+	padding: 14px 32px 23px 32px;
+	border: 1px solid $accent-color;
+	box-sizing: border-box;
+}
+
+.feature__img-box {
+	width: 116px;
+	height: 77px;
+	margin-inline: auto;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.feature__title {
+	margin-top: 19px;
+	color: rgba(244, 117, 0, 1);
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.feature__text {
+	margin-top: 18px;
+}
+

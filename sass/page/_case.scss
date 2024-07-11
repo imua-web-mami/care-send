@@ -1,0 +1,53 @@
+@use "../global/forward" as*;
+
+.case {
+	.inner {
+		padding: 96px 0 55px 0;
+	}
+
+	.section-title {
+		line-height: 1.5;
+	}
+}
+
+.caseSlider {
+	margin-top: 73px;
+}
+
+.case__item {
+	width: 405px;
+	height: 488px;
+	padding: 32px 20px 20px 20px;
+	border-radius: 30px 0;
+	box-shadow: 0px 5px 8px 3px rgba(51, 51, 51, 0.25);
+	;
+}
+
+.case__title {
+	font-size: 24px;
+	font-weight: bold;
+
+	span {
+		color: $accent-color;
+	}
+}
+
+.case__text {
+	font-size: 14px;
+	margin-top: 24px;
+}
+
+.case__img-box {
+	height: 64px;
+	margin-top: 37px;
+
+	img {
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.caseSlider {
+	display: flex;
+	gap: 70px;
+}

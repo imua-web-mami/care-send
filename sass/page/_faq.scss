@@ -1,0 +1,112 @@
+@use "../global/forward" as*;
+
+.faq {
+	background: $bg-color;
+
+	.inner {
+		padding: 96px 0 72px 0;
+	}
+}
+
+/*アコーディオン全体*/
+.accordion-area{
+	width: 100%;
+	margin-top: 70px;
+}
+
+.faq__item {
+	background: $main-color;
+	border-radius: 10px;
+}
+
+.faq__item + .faq__item {
+	margin-top: 24px;
+}
+
+/*アコーディオンタイトル*/
+.title {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size:1rem;
+	font-weight: bold;
+	padding-left: 36px;
+	position: relative;
+	transition: all .5s ease;
+
+	span {
+		display: grid;
+		place-content: center;
+		width: 44px;
+		height: 44px;
+		background: $accent-color;
+		border-radius: 50%;
+		margin-right: 24px;
+		color: $main-color;
+		font-size: 32px;
+		font-family: "Goldman", sans-serif;
+		font-weight: normal;
+	}
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+	position: absolute;
+	content:'';
+	width: 32px;
+	height: 2px;
+	background-color: $text-color;
+	
+}
+.title::before{
+	top: 40px;
+	right: 24px;
+	transform: rotate(0deg);
+	
+}
+.title::after{    
+	top: 40px;
+	right: 24px;
+	transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close {
+	background: $accent-color;
+	border-radius: 10px 10px 0 0;
+	color: $main-color;
+
+	span {
+		background: $main-color;
+		color: $accent-color;
+	}
+}
+
+.title.close::before{
+	background: $main-color;
+}
+
+.title.close::after{
+	display: none;
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+	display: none;/*はじめは非表示*/
+	padding: 24px 36px;
+	
+}
+
+.faq__answer-list {
+	margin: 1.8rem 0;
+}
+
+.faq__answer-item {
+	list-style: decimal inside;
+}
