@@ -6,6 +6,10 @@
 	background: linear-gradient(to bottom right, rgba(0, 127, 198, 1), rgba(2, 209, 255, 1));
 	position: relative;
 
+	@include mq(lg) {
+		height: auto;
+	}
+
 	&::after {
 		content: "";
 		background: url(../img/job-listing.png);
@@ -17,6 +21,10 @@
 		transform: translateX(-50%);
 		width: calc(360 / 1536 * 100%);
 		height: calc(202 / 850 * 100%);
+
+		@include mq(lg) {
+			display: none;
+		}
 	}
 }
 
@@ -26,20 +34,61 @@
 	margin-inline: auto;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
-	gap: 161px;
+
+	@include mq(lg) {
+		padding: 40px 16px 26px 16px;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.form-box {
+		@include mq(lg) {
+			margin-top: 44px;
+		}
+	}
 }
 
 .main-visual__contents-box {
 	line-height: 1.5;
 	color: $main-color;
+	margin-left: 24px;
+
+	@include mq(lg) {
+		padding-bottom: 189px;
+		position: relative;
+		text-align: center;
+
+		&::after {
+			content: "";
+			background: url(../img/job-listing.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 360px;
+			height: 201px;
+	}
+
+	}
 }
 
 .main-visual__text {
 	font-size: 20px;
 
+	@include mq(md) {
+		font-size: 14px;
+	}
+
 	&:nth-of-type(2) {
 		margin-top: 15px;
+
+		@include mq(md) {
+			margin-top: 24px;
+		}
 	}
 }
 
@@ -47,12 +96,22 @@
 	margin-top: 11px;
 	font-size: 56px;
 	font-weight: bold;
+
+	@include mq(md) {
+		font-size: 24px;
+		margin-top: 18px;
+	}
 }
 
 .main-visual__feature-list {
 	display: flex;
 	flex-direction: row;
 	margin-top: 37px;
+
+	@include mq(md) {
+		gap: 4px;
+		margin-top: 16px;
+	}
 }
 
 .main-visual__feature-item {
@@ -68,13 +127,29 @@
 	text-align: center;
 	line-height: 1;
 
+	@include mq(md) {
+		margin-right: 0;
+		width: 112px;
+		height: 112px;
+		padding: 29px 0 31px 0;
+	}
+
 	p:nth-child(1) {
 		font-size: 24px;
+
+		@include mq(md) {
+			font-size: 16px;
+		}
 	} 
 
 	p:nth-child(2) {
 		font-size: 32px;
 		margin-top: 26px;
+
+		@include mq(md) {
+			font-size: 18px;
+			margin-top: 18px;
+		}
 	}
 
 	sup {
@@ -89,11 +164,23 @@
 	font-size: 12px;
 	line-height: 1;
 
+	@include mq(md) {
+		text-align: left;
+	}
+
 	&:nth-of-type(1) {
 		margin-top: 27px;
+
+		@include mq(md) {
+			margin-top: 24px;
+		}
 	}
 
 	&:nth-of-type(2) {
 		margin-top: 7px;
+
+		@include mq(md) {
+			margin-top: 6px;
+		}
 	}
 }

@@ -19,13 +19,25 @@ $('.slider').slick({
 	slidesToScroll: 1,//1回のスライドで動かす要素数
 	responsive: [
 		{
-		breakpoint: 769,//モニターの横幅が769px以下の見せ方
+		breakpoint: 1280,//モニターの横幅が769px以下の見せ方
 		settings: {
-			slidesToShow: 2,//スライドを画面に2枚見せる
+			slidesToShow: 3.5,//スライドを画面に2枚見せる
 		}
 	},
 	{
-		breakpoint: 426,//モニターの横幅が426px以下の見せ方
+		breakpoint: 1024,//モニターの横幅が426px以下の見せ方
+		settings: {
+			slidesToShow: 3,//スライドを画面に1.5枚見せる
+		}
+	},
+	{
+		breakpoint: 820,//モニターの横幅が426px以下の見せ方
+		settings: {
+			slidesToShow: 2,//スライドを画面に1.5枚見せる
+		}
+	},
+	{
+		breakpoint: 500,//モニターの横幅が426px以下の見せ方
 		settings: {
 			slidesToShow: 1.5,//スライドを画面に1.5枚見せる
 		}
@@ -58,3 +70,5 @@ $(window).on('load', function(){
 		$(Box).slideDown(500);					//アコーディオンを開く
 	});
 });
+
+

@@ -16,6 +16,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 	<header class="header">
 		<div class="header__contents">
@@ -34,9 +35,20 @@
 					<a href=""><img src="img/mail.png" alt=""><br class="sp-br">資料請求</a>
 				</li>
 				<li class="header__menu-item">
-					<span></span><span></span><span></span>
+					<button class="menu" type="button" aria-expanded="false"
+						aria-controls="drawer"><span></span><span></span><span></span></button>
 				</li>
 			</ul>
+			<nav class="g-nav">
+				<ul>
+					<li><a href="#about">CareSendについて</a></li>
+					<li><a href="#feature">CareSendの特徴</a></li>
+					<li><a href="#case">導入事例</a></li>
+					<li><a href="#fee">料金</a></li>
+					<li><a href="#faq">よくある質問</a></li>
+					<li><a href="#doc-request">資料請求</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 	<main>
@@ -49,7 +61,7 @@
 						介護士が、すぐ見つかる
 					</h2>
 					<p class="main-visual__text">
-						「caresend」は、高品質な介護派遣サービスを提供する<br>
+						「caresend」は、<br class="sp-br">高品質な介護派遣サービスを提供する<br>
 						新しいプラットフォームです。
 					</p>
 					<ul class="main-visual__feature-list">
@@ -120,7 +132,7 @@
 			</div>
 		</section>
 		<section class="achievements">
-			<h2 class="section-title">
+			<h2 class="achievements__title">
 				多くのお客様に選ばれ続けています
 			</h2>
 			<ul class="achievements__img-list">
@@ -133,7 +145,6 @@
 				<li><img src="img/logo03 1.jpg" alt="Well-work-network(株)ウェルワークネットワーク"></li>
 				<li><img src="img/logo04 1.jpg" alt="くれよん"></li>
 				<li><img src="img/logo05 1.jpg" alt="-にほんの介護にまっすぐに- よつば | 介護サービス"></li>
-				<!--/slider-->
 			</ul>
 		</section>
 		<section class="about" id="about">
@@ -142,12 +153,13 @@
 					CareSendについて
 				</h2>
 				<p class="about__text">
-					CareSendは、人材不足に悩む介護施設を<br>
-					認定介護福祉士などの<span>高スキル介護人材</span>の派遣で<br>
+					CareSendは、<br class="sp-br">人材不足に悩む介護施設を<br>
+					認定介護福祉士などの<br class="sp-br"><span>高スキル介護人材</span>の派遣で<br>
 					支えるサービスです。
 				</p>
 				<p class="about__img-box">
-					<img src="img/caresend-feature-01 1.png" alt="派遣依頼の相談→登録者50,000人超えのデータベース→面談の上、派遣。紹介予定派遣の場合、マッチすれば正社員雇用も可能。">
+					<img class="about__img-pc" src="img/caresend-feature-01 1.png" alt="派遣依頼の相談→登録者50,000人超えのデータベース→面談の上、派遣。紹介予定派遣の場合、マッチすれば正社員雇用も可能。">
+					<img class="about__img-sp" src="img/caresend-feature-01-sp 1.png" alt="派遣依頼の相談→登録者50,000人超えのデータベース→面談の上、派遣。紹介予定派遣の場合、マッチすれば正社員雇用も可能。">
 				</p>
 			</div>
 		</section>
@@ -184,7 +196,7 @@
 							<img src="img/feature-03 1.jpg" alt="">
 						</figure>
 						<h3 class="feature__title">
-							派遣介護士の実績を閲覧可能
+							派遣介護士の実績を<br class="sp-br">閲覧可能
 						</h3>
 						<p class="feature__text">
 							「CareSend」の登録者の過去の派遣実績は、お問い合わせ頂いたユーザー限定で閲覧することができます。利用施設側のコメントなどを参照することが可能です。また、気になる介護士がいれば直接アプローチ頂くことも可能です。
@@ -195,7 +207,7 @@
 							<img src="img/feature-04 1.jpg" alt="">
 						</figure>
 						<h3 class="feature__title">
-							3社面談を実施しお互い納得の上派遣
+							3社面談を実施し<br class="sp-br">お互い納得の上派遣
 						</h3>
 						<p class="feature__text">
 							「CareSend」でマッチングした場合、弊社カウンセラーを交えた三者で面談を行い、ミスマッチが起こらないようにします。これは即日派遣の場合も同様です。
@@ -214,30 +226,57 @@
 					導入事例
 				</h2>
 				<ul class="caseSlider">
-					<li class="case__item">
-						<h3 class="case__title">
-							慢性的な介護士不足が解決し、<br>
-							<span>優秀な人材</span>が確保できるように！
-						</h3>
-						<p class="case__text">
-							「CareSend」の登場で、慢性的な介護士不足に頭を抱える問題が解消しました。優秀な介護スタッフが手軽に利用できるため、施設の運営が安定し、利用者のケアに集中できるようになりました。登録型派遣と紹介予定派遣の両方が選択肢として用意され、利用者のニーズに応えることができるのが素晴らしいです。<br>
-							またプラットフォーム上の登録介護士は、私達が普通に採用していたら絶対に巡り会えなかったであろうリーダー人材にも巡り会えましたので、とても満足しています。
-						</p>
-						<figure class="case__img-box">
-							<img src="img/case01.jpg" alt="まるもケアセンター -にほんの介護にまっすぐに-">
-						</figure>
+					<li class="case__item slide active">
+						<div class="case__contents">
+							<h3 class="case__title">
+								慢性的な介護士不足が解決し、<br>
+								<span>優秀な人材</span>が確保できるように！
+							</h3>
+							<p class="case__text">
+								「CareSend」の登場で、慢性的な介護士不足に頭を抱える問題が解消しました。優秀な介護スタッフが手軽に利用できるため、施設の運営が安定し、利用者のケアに集中できるようになりました。登録型派遣と紹介予定派遣の両方が選択肢として用意され、利用者のニーズに応えることができるのが素晴らしいです。<br>
+								またプラットフォーム上の登録介護士は、私達が普通に採用していたら絶対に巡り会えなかったであろうリーダー人材にも巡り会えましたので、とても満足しています。
+							</p>
+							<figure class="case__img-box">
+								<img src="img/case01.jpg" alt="まるもケアセンター -にほんの介護にまっすぐに-">
+							</figure>
+						</div>
+						<div class="case__contents">
+							<h3 class="case__title">
+								急な欠員補充から<span>正社員雇用</span>に繋がり、大変助かっています。
+							</h3>
+							<p class="case__text">
+								「CareSend」に急なニーズでも対応可能な介護士さんが登録されていることは、本当に心強かったです。その中でも、派遣していただいた介護士さんはとても素晴らしく、紹介予定派遣を経て正社員として採用することになりました。当該介護士の存在は施設全体にとって大きな価値を持っています。<br>
+								今後も積極的に正社員登用を考えておりますので、良い介護士に恵まれることを祈りつつ、利用をさせていただきます。
+							</p>
+							<figure class="case__img-box">
+								<img src="img/case02.jpg" alt="からびな介護サービス -にほんの介護にまっすぐに-">
+							</figure>
+						</div>
 					</li>
-					<li class="case__item">
-						<h3 class="case__title">
-							急な欠員補充から<span>正社員雇用</span>に繋がり、大変助かっています。
-						</h3>
-						<p class="case__text">
-							「CareSend」に急なニーズでも対応可能な介護士さんが登録されていることは、本当に心強かったです。その中でも、派遣していただいた介護士さんはとても素晴らしく、紹介予定派遣を経て正社員として採用することになりました。当該介護士の存在は施設全体にとって大きな価値を持っています。<br>
-							今後も積極的に正社員登用を考えておりますので、良い介護士に恵まれることを祈りつつ、利用をさせていただきます。
-						</p>
-						<figure class="case__img-box">
-							<img src="img/case02.jpg" alt="からびな介護サービス -にほんの介護にまっすぐに-">
-						</figure>
+					<li class="case__item slide active">
+						<div class="case__contents">
+							<h3 class="case__title">
+								<span>ケアの質が向上！</span>CareSendで利用者満足度も上昇！
+							</h3>
+							<p class="case__text">
+								当施設では、長らく介護士不足に悩まされてきました。ある日、急な欠員が発生し、困り果てていた時に、CareSendを利用することにしました。登録型派遣で急遽派遣してもらった介護士は、驚くほどのプロ意識と思いやりを持ち、施設内での業務をスムーズにこなしてくれました。その後、彼女は紹介予定派遣を経て正式に採用され、施設の一員として活躍しています。彼女の尽力により、施設の雰囲気は一変し、利用者の満足度も大幅に向上しました。
+							</p>
+							<figure class="case__img-box">
+								<img src="img/case03.jpg" alt="やすらぎケアハウス">
+							</figure>
+						</div>
+						<div class="case__contents">
+							<h3 class="case__title">
+								<span>派遣介護士の質</span>が高く、とても驚きました。
+							</h3>
+							<p class="case__text">
+								私たちの施設は、長年にわたり正社員だけで運営してきました。派遣の利用は考えたこともありませんでしたが、ある日、急な人手不足に悩まされ、"CareSend"を試してみることにしました。派遣された介護士は、私たちの期待をはるかに超える素晴らしい仕事ぶりでした。プロ意識や親切さに感動し、施設内の雰囲気が一変しました。<br>
+								私たちは派遣介護士の活用に新たな可能性を見出し、今後は更にその先の「採用」につなげていきたく思っています。
+							</p>
+							<figure class="case__img-box">
+								<img src="img/case04.jpg" alt="Tridoriハウスピル株式会社">
+							</figure>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -318,7 +357,7 @@
 									はい、CareSendでは登録している介護士の資格取得などの支援も行っています。<br>
 									具体的には、以下のような支援を提供しています。
 								</p>
-								<ul class="faq__answer-list">
+								<ol class="faq__answer-list">
 									<li class="faq__answer-item">
 										カウンセリングと情報提供：介護士が資格取得に興味を持っている場合、"CareSend"のカウンセラーが相談に乗り、必要な情報を提供します。
 									</li>
@@ -331,7 +370,7 @@
 									<li class="faq__answer-item">
 										研修プログラム："CareSend"が提供する研修プログラムに参加することで、介護士は専門知識やスキルを向上させることができます。これにより、彼らのキャリアの成長を支援します。
 									</li>
-								</ul>
+								</ol>
 								<p>
 									CareSendは、介護士がより充実したキャリアを築くための支援を提供し、彼らの専門性と満足度を向上させることに取り組んでいます。
 								</p>
@@ -363,7 +402,7 @@
 								<p>
 									CareSendでは、介護士を選ぶ際に以下の手順を通じて厳密な選考プロセスを行っています
 								</p>
-								<ul class="faq__answer-list">
+								<ol class="faq__answer-list">
 									<li class="faq__answer-item">
 										登録プロセス：介護士は、"CareSend"のウェブサイトやアプリを通じて登録申請を行います。この際に、必要な資格や経験、専門知識などの情報が提供されます。
 									</li>
@@ -379,7 +418,7 @@
 									<li class="faq__answer-item">
 										登録完了：選考プロセスを通過した介護士は、"CareSend"の登録スタッフとして承認されます。利用者のニーズに応じて、派遣や紹介予定派遣の依頼が介護士に送られます。
 									</li>
-								</ul>
+								</ol>
 								<p>
 									このような厳密な選考プロセスを通じて、"CareSend"は高品質な介護スタッフを提供し、利用者の安心と満足度を確保しています。
 								</p>
@@ -411,13 +450,13 @@
 								<li class="form-item">
 									<div>
 										<label for="last-name" class="form-label">姓<sup>*</sup></label>
-										<input type="text" name="last-name" autocomplete="family-name" class="form-text"
-											placeholder="介護" required>
+										<input type="text" name="last-name" autocomplete="family-name" class="form-text" placeholder="介護"
+											required>
 									</div>
 									<div>
 										<label for="first-name" class="form-label">名<sup>*</sup></label>
-										<input type="text" name="first-name" autocomplete="given-name" class="form-text"
-											placeholder="太郎" required>
+										<input type="text" name="first-name" autocomplete="given-name" class="form-text" placeholder="太郎"
+											required>
 									</div>
 								</li>
 								<li class="form-item">
@@ -444,7 +483,7 @@
 								<li>
 									<p class="form-notes">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
 								</li>
-	
+
 								<li class="btn-item">
 									<button class="doc-request-btn">資料ダウンロード（無料）</button>
 								</li>
@@ -454,6 +493,11 @@
 				</div>
 			</div>
 		</section>
+
+		<div class="change-btn prev-btn"><img src="img/arrow-01.jpg" alt=""></div>
+		<div class="change-btn next-btn"><img src="img/arrow-02.jpg" alt=""></div>
+
+
 	</main>
 
 	<footer class="footer">

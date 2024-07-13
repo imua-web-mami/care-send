@@ -15,6 +15,12 @@
 }
 
 .case__item {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 70px;
+}
+
+.case__contents {
 	width: 405px;
 	height: 488px;
 	padding: 32px 20px 20px 20px;
@@ -47,7 +53,3 @@
 	}
 }
 
-.caseSlider {
-	display: flex;
-	gap: 70px;
-}
