@@ -71,4 +71,14 @@ $(window).on('load', function(){
 	});
 });
 
-
+const mySwiper = new Swiper('.swiper-container', {
+  // オプション設定
+  loop: true, // ループするかどうか
+	loopAdditionalSlides: 1, // 無限ループさせる場合に複製するスライド数
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+	slidesPerView: 2, // 3つのスライドを表示
+	spaceBetween: 0, // スライド間の余白（px）
+});

@@ -3,6 +3,10 @@
 .case {
 	.inner {
 		padding: 96px 0 55px 0;
+
+		@include mq(md) {
+			padding: 72px 0 45px 0;
+		}
 	}
 
 	.section-title {
@@ -10,28 +14,33 @@
 	}
 }
 
-.caseSlider {
+.swiper-container {
 	margin-top: 73px;
 }
 
-.case__item {
-	display: grid;
-	grid-template-columns: 50% 50%;
-	gap: 70px;
+.swiper-slide {
+	width: 405px;
 }
 
-.case__contents {
+.case__item {
 	width: 405px;
 	height: 488px;
 	padding: 32px 20px 20px 20px;
 	border-radius: 30px 0;
 	box-shadow: 0px 5px 8px 3px rgba(51, 51, 51, 0.25);
-	;
+
+	@include mq(md) {
+		padding: 31px 10px 20px 10px;
+	}
 }
 
 .case__title {
 	font-size: 24px;
 	font-weight: bold;
+
+	@include mq(md) {
+		font-size: 18px;
+	}
 
 	span {
 		color: $accent-color;
@@ -41,15 +50,22 @@
 .case__text {
 	font-size: 14px;
 	margin-top: 24px;
+
+	@include mq(md) {
+		font-size: 12px;
+	}
 }
 
 .case__img-box {
 	height: 64px;
 	margin-top: 37px;
 
+	@include mq(md) {
+		margin-top: 48px;
+	}
+
 	img {
 		height: 100%;
 		object-fit: contain;
 	}
 }
-

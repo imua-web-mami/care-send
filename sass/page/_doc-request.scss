@@ -1,11 +1,17 @@
 @use "../global/forward" as*;
 
 .doc-request {
-	height: 240px;
-	background: url(../img/background-4876988_1280\ 1.jpg);
+	width: 100%;
+	background: url(../img/background-4876988_1280\ 1.jpg) center/cover;
+	// background-size: cover;
+	// background-position: center;
 	text-align: center;
-	display: grid;
-	place-content: center;
+	padding: 60px 0 61px 0;
+
+	@include mq(md) {
+		padding: 40px 0 40px 0;
+		background: url(../img/background-sp.jpg);
+	}
 
 	.doc-request__text {
 		color: $main-color;
@@ -17,6 +23,10 @@
 		background: $main-color;
 		color: $accent-color;
 		margin-inline: auto;
+
+		@include mq(md) {
+			margin-top: 39px;
+		}
 	}
 }
 

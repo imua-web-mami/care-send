@@ -5,6 +5,10 @@
 
 	.inner {
 		padding: 96px 56px 57px 56px;
+
+		@include mq(md) {
+			padding: 72px 32px 39px 32px;
+		}
 	}
 }
 
@@ -13,6 +17,10 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	@include mq(md) {
+		margin-top: 31px;
+	}
 }
 
 .fee__item {
@@ -24,6 +32,12 @@
 	position: relative;
 	padding: 44px 0 90px 0;
 
+	@include mq(md) {
+		width: 96px;
+		height: 91px;
+		padding: 14px 18px 17px 18px;
+	}
+
 	&::before {
 		content: "";
 		background: $accent-color;
@@ -33,6 +47,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		@include mq(md) {
+			height: 6px;
+		}
 	}
 }
 
@@ -41,6 +59,10 @@
 	font-weight: bold;
 	text-align: center;
 	line-height: 1;
+
+	@include mq(md) {
+		font-size: 12px;
+	}
 }
 
 .fee__text {
@@ -50,9 +72,18 @@
 	line-height: 1;
 	margin-top: 23px;
 
+	@include mq(md) {
+		font-size: 12px;
+		margin-top: 12px;
+	}
+
 	span {
 		color: $accent-color;
 		font-size: 96px;
+
+		@include mq(md) {
+			font-size: 36px;
+		}
 	}
 }
 
@@ -63,5 +94,9 @@
 .fee__text-item {
 	font-size: 14px;
 	list-style: disc inside;
+
+	@include mq(md) {
+		font-size: 12px;
+	}
 }
 

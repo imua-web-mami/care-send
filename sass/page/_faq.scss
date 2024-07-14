@@ -5,6 +5,10 @@
 
 	.inner {
 		padding: 96px 0 72px 0;
+
+		@include mq(md) {
+			padding: 50px 16px 83px 16px;
+		}
 	}
 }
 
@@ -12,6 +16,10 @@
 .accordion-area{
 	width: 100%;
 	margin-top: 70px;
+
+	@include mq(md) {
+		margin-top: 48px;
+	}
 }
 
 .faq__item {
@@ -21,6 +29,10 @@
 
 .faq__item + .faq__item {
 	margin-top: 24px;
+
+	@include mq(md) {
+		margin-top: 16px;
+	}
 }
 
 /*アコーディオンタイトル*/
@@ -31,11 +43,16 @@
 	align-items: center;
 	border-radius: 10px;
 	cursor: pointer;
-	font-size:1rem;
 	font-weight: bold;
 	padding-left: 36px;
 	position: relative;
 	transition: all .5s ease;
+
+	@include mq(md) {
+		height: 64px;
+		font-size: 14px;
+		padding: 0 34px 0 10px;
+	}
 
 	span {
 		display: grid;
@@ -49,6 +66,13 @@
 		font-size: 32px;
 		font-family: "Goldman", sans-serif;
 		font-weight: normal;
+
+		@include mq(md) {
+			width: 32px;
+			height: 32px;
+			margin-right: 10px;
+			font-size: 16px;
+		}
 	}
 }
 
@@ -60,18 +84,32 @@
 	width: 32px;
 	height: 2px;
 	background-color: $text-color;
+
+	@include mq(md) {
+		width: 16px;
+	}
 	
 }
 .title::before{
 	top: 40px;
 	right: 24px;
 	transform: rotate(0deg);
+
+	@include mq(md) {
+		top: 33px;
+		right: 10px;
+	}
 	
 }
 .title::after{    
 	top: 40px;
 	right: 24px;
 	transform: rotate(90deg);
+
+	@include mq(md) {
+		top: 33px;
+		right: 10px;
+	}
 
 }
 
@@ -100,6 +138,11 @@
 .box {
 	display: none;/*はじめは非表示*/
 	padding: 24px 36px;
+
+	@include mq(md) {
+		padding: 10px;
+		font-size: 14px;
+	}
 	
 }
 
