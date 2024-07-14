@@ -2,6 +2,12 @@
 
 $(".header__menu-item").click(function () {
 	$(this).toggleClass('active');
+	$(".g-nav").toggleClass('panelactive');
+});
+
+$(".g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".header__menu-item").removeClass('active');//ボタンの activeクラスを除去し
+    $(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
 });
 
 // achievements スライダー
