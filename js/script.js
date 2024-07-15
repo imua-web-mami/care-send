@@ -6,8 +6,8 @@ $(".header__menu-item").click(function () {
 });
 
 $(".g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-    $(".header__menu-item").removeClass('active');//ボタンの activeクラスを除去し
-    $(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+	$(".header__menu-item").removeClass('active');//ボタンの activeクラスを除去し
+	$(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
 });
 
 // achievements スライダー
@@ -25,41 +25,41 @@ $('.slider').slick({
 	slidesToScroll: 1,//1回のスライドで動かす要素数
 	responsive: [
 		{
-		breakpoint: 1280,//モニターの横幅が769px以下の見せ方
-		settings: {
-			slidesToShow: 3.5,//スライドを画面に2枚見せる
+			breakpoint: 1280,//モニターの横幅が769px以下の見せ方
+			settings: {
+				slidesToShow: 3.5,//スライドを画面に2枚見せる
+			}
+		},
+		{
+			breakpoint: 1024,//モニターの横幅が426px以下の見せ方
+			settings: {
+				slidesToShow: 3,//スライドを画面に1.5枚見せる
+			}
+		},
+		{
+			breakpoint: 820,//モニターの横幅が426px以下の見せ方
+			settings: {
+				slidesToShow: 2,//スライドを画面に1.5枚見せる
+			}
+		},
+		{
+			breakpoint: 500,//モニターの横幅が426px以下の見せ方
+			settings: {
+				slidesToShow: 1.5,//スライドを画面に1.5枚見せる
+			}
 		}
-	},
-	{
-		breakpoint: 1024,//モニターの横幅が426px以下の見せ方
-		settings: {
-			slidesToShow: 3,//スライドを画面に1.5枚見せる
-		}
-	},
-	{
-		breakpoint: 820,//モニターの横幅が426px以下の見せ方
-		settings: {
-			slidesToShow: 2,//スライドを画面に1.5枚見せる
-		}
-	},
-	{
-		breakpoint: 500,//モニターの横幅が426px以下の見せ方
-		settings: {
-			slidesToShow: 1.5,//スライドを画面に1.5枚見せる
-		}
-	}
-]
+	]
 });
 
 // faq アコーディオン
-$('.title').on('click', function() {//タイトル要素をクリックしたら
+$('.title').on('click', function () {//タイトル要素をクリックしたら
 	$('.box').slideUp(500);//クラス名.boxがついたすべてのアコーディオンを閉じる
-    
+
 	var findElm = $(this).next(".box");//タイトル直後のアコーディオンを行うエリアを取得
-    
-	if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+
+	if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
 		$(this).removeClass('close');//クラス名を除去    
-	}else{//それ以外は
+	} else {//それ以外は
 		$('.close').removeClass('close'); //クラス名closeを全て除去した後
 		$(this).addClass('close');//クリックしたタイトルにクラス名closeを付与し
 		$(findElm).slideDown(500);//アコーディオンを開く
@@ -67,12 +67,12 @@ $('.title').on('click', function() {//タイトル要素をクリックしたら
 });
 
 //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
-$(window).on('load', function(){
+$(window).on('load', function () {
 	$('.accordion-area li:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
-	$(".open").each(function(index, element){	//openクラスを取得
-		var Title =$(element).children('.title');	//openクラスの子要素のtitleクラスを取得
+	$(".open").each(function (index, element) {	//openクラスを取得
+		var Title = $(element).children('.title');	//openクラスの子要素のtitleクラスを取得
 		$(Title).addClass('close');				///タイトルにクラス名closeを付与し
-		var Box =$(element).children('.box');	//openクラスの子要素boxクラスを取得
+		var Box = $(element).children('.box');	//openクラスの子要素boxクラスを取得
 		$(Box).slideDown(500);					//アコーディオンを開く
 	});
 });
@@ -80,20 +80,38 @@ $(window).on('load', function(){
 // case スライダー
 
 const mySwiper = new Swiper('.swiper-container', {
-  // オプション設定
-  loop: true, // ループするかどうか
+	// オプション設定
+	loop: true, // ループするかどうか
 	loopAdditionalSlides: 1, // 無限ループさせる場合に複製するスライド数
-	
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 	slidesPerView: 1,
-  breakpoints: {
-    // スライドの表示枚数：500px以上の場合
-    500: {
-      slidesPerView: 2,
-    }
-  },
+	breakpoints: {
+		// スライドの表示枚数：500px以上の場合
+		500: {
+			slidesPerView: 2,
+		}
+	},
 	spaceBetween: 0, // スライド間の余白（px）
 });
+
+function slideAnime() {
+	$('.fadeIn').each(function () { //fadeUpTriggerというクラス名が
+		var elemPos = $(this).offset().top - 50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight) {
+			$(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+		} else {
+			$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+		}
+	});
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+	slideAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述
