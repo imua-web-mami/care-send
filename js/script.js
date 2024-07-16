@@ -1,3 +1,30 @@
+// case スライダー
+
+document.addEventListener('DOMContentLoaded', function () {
+	const swiper = new Swiper('.swiper', {
+		// Optional parameters
+		direction: 'horizontal',
+		loop: true,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+	});
+});
+
 // headerハンバーガーメニュー
 
 $(".header__menu-item").click(function () {
@@ -77,26 +104,9 @@ $(window).on('load', function () {
 	});
 });
 
-// case スライダー
 
-const mySwiper = new Swiper('.swiper-container', {
-	// オプション設定
-	loop: true, // ループするかどうか
-	loopAdditionalSlides: 1, // 無限ループさせる場合に複製するスライド数
 
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	slidesPerView: 1,
-	breakpoints: {
-		// スライドの表示枚数：500px以上の場合
-		500: {
-			slidesPerView: 2,
-		}
-	},
-	spaceBetween: 0, // スライド間の余白（px）
-});
+// fadeUpアニメーション
 
 function slideAnime() {
 	$('.fadeIn').each(function () { //fadeUpTriggerというクラス名が
