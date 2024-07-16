@@ -210,11 +210,14 @@
   height: calc(100vh - 64px);
   background: rgb(0, 127, 198);
   transition: all 0.3s;
+  display: none;
+  pointer-events: none;
 }
 
 .g-nav.panelactive {
   opacity: 1;
   z-index: 10;
+  pointer-events: all;
 }
 
 .g-nav.panelactive {
@@ -241,7 +244,7 @@
 /*リストのレイアウト設定*/
 .g-nav li {
   height: 64px;
-  width: 100vw;
+  width: 100%;
   border-bottom: 1px solid rgb(255, 255, 255);
   display: flex;
   align-items: center;
