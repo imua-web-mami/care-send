@@ -62,29 +62,49 @@
 	}
 }
 
-// .swiper-button-prev:after,
-// .swiper-button-next:after {
-//   bottom: 0;
-//   content: "";
-//   height: 0;
-//   margin: auto;
-//   position: absolute;
-//   top: 0;
-//   width: 0;
-// }
+.case__swiper {
+	margin-top: 73px;
+}
 
-// .swiper-button-prev:after {
-// 	content: "";
-// 	background: url(../img/arrow-01.jpg);
-// 	background-size: contain;
-// 	width: 34px;
-// 	height: 34px;
-// }
+.swiper {
+	width: 100%;
+	height: 100%;
+}
 
-// .swiper-button-next:after {
-// 	content: "";
-// 	background: url(../img/arrow-02.jpg);
-// 	background-size: contain;
-// 	width: 34px;
-// 	height: 34px;
-// }
+.swiper-slider {
+
+}
+
+.swiper-slide {
+	width: 405px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  bottom: 0;
+  content: "";
+  height: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.swiper-button-prev:after {
+	content: "";
+	background: url(../img/arrow-01.jpg);
+	background-size: contain;
+	width: 34px;
+	height: 34px;
+}
+
+.swiper-button-next:after {
+	content: "";
+	background: url(../img/arrow-02.jpg);
+	background-size: contain;
+	width: 34px;
+	height: 34px;
+}

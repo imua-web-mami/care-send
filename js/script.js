@@ -5,12 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
-
-		// If we need pagination
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
+		slidesPerGroup: 2, // 2枚ずつ動かす
+		slidesPerView: 2, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
+  	spaceBetween: 0, // スライド間の余白（px）
 
 		// Navigation arrows
 		navigation: {
@@ -18,10 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			prevEl: '.swiper-button-prev',
 		},
 
-		// And if we need scrollbar
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
 	});
 });
 
