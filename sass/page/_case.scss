@@ -2,7 +2,7 @@
 
 .case {
 	.inner {
-		padding: 96px 0 55px 0;
+		padding: 96px 0 35px 0;
 
 		@include mq(md) {
 			padding: 72px 0 45px 0;
@@ -22,6 +22,8 @@
 	box-shadow: 0px 5px 8px 3px rgba(51, 51, 51, 0.25);
 
 	@include mq(md) {
+		width: calc(100% - 64px);
+		height: 471px;
 		padding: 31px 10px 20px 10px;
 	}
 }
@@ -63,7 +65,7 @@
 }
 
 .case__swiper {
-	margin-top: 73px;
+	margin-top: 53px;
 }
 
 .swiper {
@@ -71,15 +73,15 @@
 	height: 100%;
 }
 
-.swiper-slider {
-
-}
-
 .swiper-slide {
 	width: 405px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@include mq(md) {
+
+	}
 }
 
 .swiper-button-prev:after,
@@ -107,4 +109,8 @@
 	background-size: contain;
 	width: 34px;
 	height: 34px;
+}
+
+.case__slide-box {
+	padding: 20px;
 }

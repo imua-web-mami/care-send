@@ -8,6 +8,19 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 2, // 2枚ずつ動かす
 		slidesPerView: 2, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
   	spaceBetween: 0, // スライド間の余白（px）
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				slidesPerGroup: 1,
+			},
+			// when window width is >= 640px
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 0
+			}
+		},
 
 		// Navigation arrows
 		navigation: {
