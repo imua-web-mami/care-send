@@ -4,9 +4,9 @@
 	background: linear-gradient(to bottom right, rgba(0, 127, 198, 1), rgba(2, 209, 255, 1));
 
 	.inner {
-		padding: 96px 0 57px 0;
+		padding: 96px 16px 57px 16px;
 
-		@include mq(md) {
+		@include mq(lg) {
 			padding: 72px 16px 46px 16px;
 		}
 	}
@@ -23,17 +23,21 @@
 	gap: 35px;
 	margin-top: 79px;
 
-	@include mq(md) {
+	@include mq(lg) {
 		flex-direction: column;
 		gap: 40px;
 		margin-top: 0;
+	}
+
+	.form-box {
+		margin-inline: auto;
 	}
 }
 
 .download__text-box {
 	padding-top: 32px;
 	
-	@include mq(md) {
+	@include mq(lg) {
 		padding-top: 26px;
 	}
 }
@@ -41,9 +45,12 @@
 .download__text {
 	color: $main-color;
 
+	@include mq(lg) {
+		text-align: center;
+	}
+
 	@include mq(md) {
 		font-size: 12px;
-		text-align: center;
 	}
 }
 
@@ -52,11 +59,14 @@
 	width: 413px;
 	height: 253px;
 
+	@include mq(lg) {
+		margin-inline: auto;
+	} 
+	
 	@include mq(md) {
 		margin-top: 16px;
 		width: 240px;
 		height: 149px;
-		margin-inline: auto;
 	}
 
 	img {

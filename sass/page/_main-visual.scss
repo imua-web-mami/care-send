@@ -6,7 +6,7 @@
 	background: linear-gradient(to bottom right, rgba(0, 127, 198, 1), rgba(2, 209, 255, 1));
 	position: relative;
 
-	@include mq(lg) {
+	@media screen and (max-width:1200px) {
 		height: auto;
 	}
 
@@ -22,7 +22,7 @@
 		width: calc(360 / 1536 * 100%);
 		height: calc(202 / 850 * 100%);
 
-		@include mq(lg) {
+		@media screen and (max-width:1200px) {
 			display: none;
 		}
 	}
@@ -37,14 +37,15 @@
 	justify-content: space-between;
 	align-items: center;
 
-	@include mq(lg) {
+	@media screen and (max-width:1200px) {
 		padding: 40px 16px 26px 16px;
 		flex-direction: column;
 		gap: 0;
 	}
 
 	.form-box {
-		@include mq(lg) {
+
+		@media screen and (max-width:1200px) {
 			margin-top: 44px;
 		}
 	}
@@ -55,10 +56,11 @@
 	color: $main-color;
 	margin-left: 24px;
 
-	@include mq(lg) {
+	@media screen and (max-width:1200px) {
 		padding-bottom: 189px;
 		position: relative;
 		text-align: center;
+		margin-left: 0;
 
 		&::after {
 			content: "";
@@ -107,6 +109,7 @@
 .main-visual__feature-list {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	margin-top: 37px;
 
 	@include mq(md) {

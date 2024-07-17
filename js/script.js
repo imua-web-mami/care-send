@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				spaceBetween: 0,
 				slidesPerGroup: 1,
 			},
-			// when window width is >= 640px
-			640: {
+			// when window width is >=  ~ px
+			820: {
 				slidesPerView: 2,
 				spaceBetween: 0
 			}
@@ -58,27 +58,33 @@ $('.slider').slick({
 	slidesToScroll: 1,//1回のスライドで動かす要素数
 	responsive: [
 		{
-			breakpoint: 1280,//モニターの横幅が769px以下の見せ方
+			breakpoint: 1340,//モニターの横幅が~px以下の見せ方
 			settings: {
-				slidesToShow: 3.5,//スライドを画面に2枚見せる
+				slidesToShow: 3.5,//スライドを画面に~枚見せる
 			}
 		},
 		{
-			breakpoint: 1024,//モニターの横幅が426px以下の見せ方
+			breakpoint: 1024,
 			settings: {
-				slidesToShow: 3,//スライドを画面に1.5枚見せる
+				slidesToShow: 3,
 			}
 		},
 		{
-			breakpoint: 820,//モニターの横幅が426px以下の見せ方
+			breakpoint: 840,
 			settings: {
-				slidesToShow: 2,//スライドを画面に1.5枚見せる
+				slidesToShow: 2.5,
 			}
 		},
 		{
-			breakpoint: 500,//モニターの横幅が426px以下の見せ方
+			breakpoint: 690,
 			settings: {
-				slidesToShow: 1.5,//スライドを画面に1.5枚見せる
+				slidesToShow: 1.8,
+			}
+		},
+		{
+			breakpoint: 490,
+			settings: {
+				slidesToShow: 1.1,
 			}
 		}
 	]
