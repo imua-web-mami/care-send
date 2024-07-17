@@ -13,6 +13,16 @@
 		margin-inline: auto;
 		padding: 8px 8px 19px 8px;
 	}
+
+	.doc-request-btn {
+		opacity: 0.2;
+		cursor: default;
+
+		&:hover {
+			opacity: 0.2;
+		}
+	}
+
 }
 
 .bubble-text {
@@ -109,9 +119,14 @@
 }
 
 .end-message {
-  display: none;
+	display: none;
+	font-size: 18px;
+	font-weight: bold;
+	color: $accent-color;
+	text-align: center;
+
 }
 
 .false-message {
-  display: none;
+	display: none;
 }

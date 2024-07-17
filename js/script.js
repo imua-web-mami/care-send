@@ -43,6 +43,82 @@ $(".g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 	$(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
 });
 
+
+// form 全て入力したら送信ボタンを機能させる
+
+document.addEventListener("DOMContentLoaded", function() {
+  const mainForm = document.getElementById("main-form");
+  const mainButton = document.getElementById("main-submit-btn");
+  const footerForm = document.getElementById("footer-form");
+  const footerButton = document.getElementById("footer-submit-btn");
+
+  mainForm.addEventListener("input", function() {
+    update(mainForm, mainButton);
+  });
+
+  footerForm.addEventListener("input", function() {
+    update(footerForm, footerButton);
+  });
+
+  function update(form, button) {
+    const isRequired = form.checkValidity();
+    if (isRequired) {
+      button.style.opacity = 1;
+      button.style.cursor = "pointer";
+    } else {
+      button.style.opacity = 0.5;
+      button.style.cursor = "not-allowed";
+    }
+  }
+});
+
+// form お問い合わせ完了メッセージ
+
+$(document).ready(function () {
+
+	$('#main-form').submit(function (event) {
+		var formData = $('#main-form').serialize();
+		$.ajax({
+			url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYorC3RDkaA8MvN2NlFHsr61QV9H9o_mvPMlz1EsIN_9G_Aw/formResponse",
+			data: formData,
+			type: "POST",
+			dataType: "xml",
+			statusCode: {
+				0: function () {
+					$("#main-end-message").slideDown();
+					$("#main-submit-btn").fadeOut();
+					//window.location.href = "thanks.html";
+				},
+				200: function () {
+					$("#main-false-message").slideDown();
+				}
+			}
+		});
+		event.preventDefault();
+	});
+
+	$('#footer-form').submit(function (event) {
+		var formData = $('#footer-form').serialize();
+		$.ajax({
+			url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYorC3RDkaA8MvN2NlFHsr61QV9H9o_mvPMlz1EsIN_9G_Aw/formResponse",
+			data: formData,
+			type: "POST",
+			dataType: "xml",
+			statusCode: {
+				0: function () {
+					$("#footer-end-message").slideDown();
+					$("#footer-submit-btn").fadeOut();
+					//window.location.href = "thanks.html";
+				},
+				200: function () {
+					$("#footer-false-message").slideDown();
+				}
+			}
+		});
+		event.preventDefault();
+	});
+});
+
 // achievements スライダー
 
 $('.slider').slick({

@@ -1286,6 +1286,13 @@
     padding: 8px 8px 19px 8px;
   }
 }
+.form-box .doc-request-btn {
+  opacity: 0.2;
+  cursor: default;
+}
+.form-box .doc-request-btn:hover {
+  opacity: 0.2;
+}
 
 .bubble-text {
   width: 384px;
@@ -1384,13 +1391,17 @@
 
 .end-message {
   display: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 127, 198);
+  text-align: center;
 }
 
 .false-message {
   display: none;
 }
 
-.fadeUp {
+.fadeIn {
   animation-name: fadeInAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -1405,23 +1416,6 @@
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-.oderFadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 .delay-time02 {
