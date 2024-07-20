@@ -100,8 +100,8 @@
 }
 @media screen and (max-width: 1024px) {
   .doc-request-item {
-    width: 64px;
-    height: 64px;
+    width: 9.5952023988vh;
+    height: 9.5952023988vh;
   }
 }
 .doc-request-item img {
@@ -316,6 +316,7 @@
 .footer__small {
   font-size: 12px;
   font-family: "Goldman", sans-serif;
+  line-height: 1;
 }
 
 .main-visual {
@@ -758,6 +759,7 @@
   margin-top: 24px;
   background: rgb(255, 255, 255);
   margin-inline: auto;
+  line-height: 1;
 }
 @media screen and (max-width: 820px) {
   .doc-request .doc-request-btn {
@@ -1039,6 +1041,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  line-height: 1;
   padding-left: 36px;
   position: relative;
   transition: all 0.5s ease;
@@ -1048,6 +1051,7 @@
     height: 64px;
     font-size: 14px;
     padding: 0 34px 0 10px;
+    line-height: 1.5;
   }
 }
 .title span {
@@ -1165,6 +1169,11 @@
 }
 .download .section-title {
   color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 820px) {
+  .download .section-title {
+    line-height: 1.5;
+  }
 }
 
 .download__wrap {

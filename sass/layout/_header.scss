@@ -100,8 +100,8 @@ height: inherit;
 	width: 100%;
 	
 	@include mq(lg) {
-		width: 64px;
-		height: 64px;
+		width: calc(64 / 667 * 100vh);
+	  height: calc(64 / 667 * 100vh);
 	}
 
 	img {

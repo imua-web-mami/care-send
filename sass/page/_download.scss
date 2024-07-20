@@ -13,6 +13,10 @@
 
 	.section-title {
 		color: $main-color;
+
+		@include mq(md) {
+			line-height: 1.5;
+		}
 	}
 }
 

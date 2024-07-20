@@ -44,6 +44,7 @@
 	border-radius: 10px;
 	cursor: pointer;
 	font-weight: bold;
+	line-height: 1;
 	padding-left: 36px;
 	position: relative;
 	transition: all .5s ease;
@@ -52,6 +53,7 @@
 		height: 64px;
 		font-size: 14px;
 		padding: 0 34px 0 10px;
+		line-height: 1.5;
 	}
 
 	span {
