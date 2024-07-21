@@ -114,8 +114,8 @@
 }
 @media screen and (max-width: 1024px) {
   .doc-request-item img {
-    width: 24px;
-    height: 24px;
+    width: 37.5%;
+    height: 37.5%;
     margin-right: 0;
     margin-bottom: 4px;
     display: block;
@@ -175,26 +175,26 @@
   height: 1px;
   border-radius: 5px;
   background: #fff;
-  width: 32px;
+  width: 50%;
 }
 
 .header__menu-item span:nth-of-type(1) {
-  top: 14px;
+  top: 21.875%;
 }
 
 .header__menu-item span:nth-of-type(2) {
-  top: 24px;
+  top: 37.5%;
 }
 
 .header__menu-item span:nth-of-type(3) {
-  top: 34px;
+  top: 53.125%;
 }
 
 .header__menu-item span:nth-of-type(4)::after {
   content: "メニュー";
   position: absolute;
   width: 40px;
-  top: 40px;
+  top: 62.5%;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -205,10 +205,15 @@
 
 /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
 .header__menu-item.active span:nth-of-type(1) {
-  top: 18px;
-  left: 16px;
-  transform: translateY(6px) rotate(-45deg);
-  width: 32px;
+  top: 28.125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(7px) rotate(-45deg);
+  width: 50%;
+}
+@media screen and (max-width: 400px) {
+  .header__menu-item.active span:nth-of-type(1) {
+    transform: translateX(-50%) translateY(6px) rotate(-45deg);
+  }
 }
 
 .header__menu-item.active span:nth-of-type(2) {
@@ -216,10 +221,15 @@
 }
 
 .header__menu-item.active span:nth-of-type(3) {
-  top: 30px;
-  left: 16px;
-  transform: translateY(-6px) rotate(45deg);
-  width: 32px;
+  top: 46.875%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-7px) rotate(45deg);
+  width: 50%;
+}
+@media screen and (max-width: 400px) {
+  .header__menu-item.active span:nth-of-type(3) {
+    transform: translateX(-50%) translateY(-6px) rotate(45deg);
+  }
 }
 
 /*========= ナビゲーションのためのCSS ===============*/
@@ -227,12 +237,11 @@
   position: fixed;
   z-index: -1;
   opacity: 0;
-  top: 64px;
+  top: 9.5952023988vh;
   width: 100%;
   height: calc(100vh - 64px);
   background: rgb(0, 127, 198);
   transition: all 0.3s;
-  display: none;
   pointer-events: none;
 }
 
@@ -760,6 +769,8 @@
   background: rgb(255, 255, 255);
   margin-inline: auto;
   line-height: 1;
+  display: grid;
+  place-content: center;
 }
 @media screen and (max-width: 820px) {
   .doc-request .doc-request-btn {
@@ -785,6 +796,7 @@
 }
 .case .section-title {
   line-height: 1.5;
+  color: rgb(34, 34, 34);
 }
 
 .case__item {
@@ -963,6 +975,7 @@
   text-align: center;
   line-height: 1;
   margin-top: 23px;
+  color: rgb(0, 0, 0);
 }
 @media screen and (max-width: 820px) {
   .fee__text {
@@ -1428,7 +1441,7 @@
   display: none;
 }
 
-.fadeIn {
+.fadeUp {
   animation-name: fadeInAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;

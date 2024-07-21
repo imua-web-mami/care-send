@@ -8,7 +8,7 @@
 	<meta name="description" content="介護派遣サービスなら、業界最安値水準の成約手数料12%で利用できるCareSend。認定介護福祉士など高スキル人材が揃っており、最短即日の派遣実績もあり！">
 	<title>CareSend | 有資格介護人材が集まる介護派遣サービス</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/favicon.png">
@@ -33,14 +33,15 @@
 			</nav>
 			<ul class="header__contents-list">
 				<li class="doc-request-item">
-					<a href=""><img src="img/mail.png" alt="">資料請求</a>
+					<a href="#download"><img src="img/mail.png" alt="">資料請求</a>
 				</li>
 				<li class="header__menu-item">
-					<button class="menu" type="button" aria-expanded="false"
-						aria-controls="drawer"><span></span><span></span><span></span><span></span></button>
+					<button class="menu" type="button" aria-expanded="false" aria-controls="g-nav">
+						<span></span><span></span><span></span><span></span>
+					</button>
 				</li>
 			</ul>
-			<nav class="g-nav">
+			<nav class="g-nav" id="g-nav">
 				<ul>
 					<li><a href="#about">CareSendについて</a></li>
 					<li><a href="#feature">CareSendの特徴</a></li>
@@ -104,24 +105,24 @@
 							</li>
 							<li class="form-item">
 								<label for="company-name" class="form-label">
-									<p>会社名<sup>*</sup></p>
-									<input type="text" name="entry.2090650089" autocomplete="organization" class="form-text"
-										placeholder="株式会社CareSend" required>
+									会社名<sup>*</sup>
 								</label>
+									<input type="text" id="company-name"  name="entry.2090650089" autocomplete="organization" class="form-text"
+										placeholder="株式会社CareSend" required>
+								
 							</li>
 							<li class="form-item">
 								<label for="email" class="form-label">
-									<p>メールアドレス<sup>*</sup></p>
-									<input type="email" name="entry.1861171158" autocomplete="email" class="form-text"
-										placeholder="caresend@caresend.com" required>
+									メールアドレス<sup>*</sup>
 								</label>
+									<input type="email" id="email" name="entry.1861171158" autocomplete="email" class="form-text"
+										placeholder="caresend@caresend.com" required>
 							</li>
 							<li class="form-item">
 								<label for="tel" class="form-label">
-									<p>電話番号<sup>*</sup></p>
-									<input type="tel" name="entry.501386806" autocomplete="tel" class="form-text"
+									電話番号<sup>*</sup></label>
+									<input type="tel" id="tel" name="entry.501386806" autocomplete="tel" class="form-text"
 										placeholder="000-0000-0000" required>
-								</label>
 							</li>
 							<li>
 								<p class="form-notes">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
@@ -142,15 +143,15 @@
 				多くのお客様に選ばれ続けています
 			</h2>
 			<ul class="achievements__img-list">
-				<li class="achievements__img-item fadeIn"><img src="img/jiseki 1.jpg" alt="導入企業数累計200社突破"></li>
-				<li class="achievements__img-item fadeIn"><img src="img/jiseki-02 1.jpg" alt="継続率99％以上"></li>
+				<li class="achievements__img-item fadeIn"><img src="img/achievements1.jpg" alt="導入企業数累計200社突破"></li>
+				<li class="achievements__img-item fadeIn"><img src="img/achievements2.jpg" alt="継続率99％以上"></li>
 			</ul>
 			<ul class="slider">
 				<li><img src="img/logo01.jpg" alt="Infinity-gear株式会社インフィニティギア"></li>
 				<li><img src="img/logo02.jpg" alt="Cyber-adventuresサイバーアドベンチャーズ株式会社"></li>
-				<li><img src="img/logo03 1.jpg" alt="Well-work-network(株)ウェルワークネットワーク"></li>
-				<li><img src="img/logo04 1.jpg" alt="くれよん"></li>
-				<li><img src="img/logo05 1.jpg" alt="-にほんの介護にまっすぐに- よつば | 介護サービス"></li>
+				<li><img src="img/logo03.jpg" alt="Well-work-network(株)ウェルワークネットワーク"></li>
+				<li><img src="img/logo04.jpg" alt="くれよん"></li>
+				<li><img src="img/logo05.jpg" alt="-にほんの介護にまっすぐに- よつば | 介護サービス"></li>
 			</ul>
 		</section>
 		<section class="about" id="about">
@@ -164,9 +165,9 @@
 					支えるサービスです。
 				</p>
 				<p class="about__img-box fadeIn">
-					<img class="about__img-pc" src="img/caresend-feature-01 1.png"
+					<img class="about__img-pc" src="img/about-pc.png"
 						alt="派遣依頼の相談→登録者50,000人超えのデータベース→面談の上、派遣。紹介予定派遣の場合、マッチすれば正社員雇用も可能。">
-					<img class="about__img-sp" src="img/caresend-feature-01-sp 1.png"
+					<img class="about__img-sp" src="img/about-sp.png"
 						alt="派遣依頼の相談→登録者50,000人超えのデータベース→面談の上、派遣。紹介予定派遣の場合、マッチすれば正社員雇用も可能。">
 				</p>
 			</div>
@@ -179,7 +180,7 @@
 				<ul class="feature__list">
 					<li class="feature__item fadeIn">
 						<figure class="feature__img-box">
-							<img src="img/feature-01 1.jpg" alt="">
+							<img src="img/feature-01.jpg" alt="">
 						</figure>
 						<h3 class="feature__title">
 							登録者の内5割が有資格者
@@ -190,7 +191,7 @@
 					</li>
 					<li class="feature__item fadeIn">
 						<figure class="feature__img-box">
-							<img src="img/feature-02 1.jpg" alt="">
+							<img src="img/feature-02.jpg" alt="">
 						</figure>
 						<h3 class="feature__title">
 							登録型派遣と紹介予定派遣の2種に対応
@@ -201,7 +202,7 @@
 					</li>
 					<li class="feature__item fadeIn">
 						<figure class="feature__img-box">
-							<img src="img/feature-03 1.jpg" alt="">
+							<img src="img/feature-03.jpg" alt="">
 						</figure>
 						<h3 class="feature__title">
 							派遣介護士の実績を<br class="sp-br">閲覧可能
@@ -212,7 +213,7 @@
 					</li>
 					<li class="feature__item fadeIn">
 						<figure class="feature__img-box">
-							<img src="img/feature-04 1.jpg" alt="">
+							<img src="img/feature-04.jpg" alt="">
 						</figure>
 						<h3 class="feature__title">
 							3社面談を実施し<br class="sp-br">お互い納得の上派遣
@@ -224,10 +225,10 @@
 				</ul>
 			</div>
 		</section>
-		<section class="doc-request">
+		<div class="doc-request">
 			<p class="doc-request__text">登録介護士を<br class="sp-br">無料でご覧いただけます。</p>
-			<button class="doc-request-btn"><a href="#">無料で資料ダウンロード</a></button>
-		</section>
+			<p class="doc-request-btn"><a href="#download">無料で資料ダウンロード</a></p>
+		</div>
 		<section class="case" id="case">
 			<div class="inner">
 				<h2 class="section-title">
@@ -453,7 +454,7 @@
 					</li>
 				</ul>
 		</section>
-		<section class="download">
+		<section class="download" id="download">
 			<div class="inner">
 				<h2 class="section-title">
 					介護派遣に関する資料を<br class="sp-br">無料でダウンロード
@@ -476,37 +477,34 @@
 							<ul class="form-list">
 								<li class="form-item">
 									<div>
-										<label for="last-name" class="form-label">姓<sup>*</sup>
+										<label for="footer-last-name" class="form-label">姓<sup>*</sup>
 										</label>
-										<input type="text" name="entry.1998982757" autocomplete="family-name" class="form-text"
+										<input type="text" id="footer-last-name" name="entry.1998982757" autocomplete="family-name" class="form-text"
 											placeholder="介護" required>
 									</div>
 									<div>
-										<label for="first-name" class="form-label">名<sup>*</sup></label>
-										<input type="text" name="entry.297168255" autocomplete="given-name" class="form-text"
+										<label for="footer-first-name" class="form-label">名<sup>*</sup></label>
+										<input type="text" id="footer-first-name" name="entry.297168255" autocomplete="given-name" class="form-text"
 											placeholder="太郎" required>
 									</div>
 								</li>
 								<li class="form-item">
-									<label for="company-name" class="form-label">
-										<p>会社名<sup>*</sup></p>
-										<input type="text" name="entry.2090650089" autocomplete="organization" class="form-text"
+									<label for="footer-company-name" class="form-label">
+										会社名<sup>*</sup></label>
+										<input type="text" id="footer-company-name" name="entry.2090650089" autocomplete="organization" class="form-text"
 											placeholder="株式会社CareSend" required>
-									</label>
 								</li>
 								<li class="form-item">
-									<label for="email" class="form-label">
-										<p>メールアドレス<sup>*</sup></p>
-										<input type="email" name="entry.1861171158" autocomplete="email" class="form-text"
+									<label for="footer-email" class="form-label">
+										メールアドレス<sup>*</sup></label>
+										<input type="email" id="footer-email" name="entry.1861171158" autocomplete="email" class="form-text"
 											placeholder="caresend@caresend.com" required>
-									</label>
 								</li>
 								<li class="form-item">
-									<label for="tel" class="form-label">
-										<p>電話番号<sup>*</sup></p>
-										<input type="tel" name="entry.501386806" autocomplete="tel" class="form-text"
+									<label for="footer-tel" class="form-label">
+										電話番号<sup>*</sup></label>
+										<input type="tel" id="footer-tel" name="entry.501386806" autocomplete="tel" class="form-text"
 											placeholder="000-0000-0000" required>
-									</label>
 								</li>
 								<li>
 									<p class="form-notes">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
@@ -526,7 +524,7 @@
 	</main>
 
 	<footer class="footer">
-		<p class="footer__img-block"><a href="index.html"><img src="img/logo.svg" alt="CareSend"></a></p>
+		<p class="footer__img-block"><a href="#top"><img src="img/logo.svg" alt="CareSend"></a></p>
 		<small class="footer__small">&copy; CaseSend, Inc.</small>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"

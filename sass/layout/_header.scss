@@ -112,8 +112,8 @@ height: inherit;
 		vertical-align: middle;
 
 		@include mq(lg) {
-			width: 24px;
-			height: 24px;
+			width: calc(24 / 64 * 100%);
+			height: calc(24 / 64 * 100%);
 			margin-right: 0;
 			margin-bottom: 4px;
 			display: block;
@@ -175,27 +175,27 @@ height: inherit;
     height: 1px;
     border-radius: 5px;
 		background: #fff;
-		width: 32px;
+		width: calc(32 / 64 *100%);
   }
 
 
 .header__menu-item span:nth-of-type(1) {
-	top:14px;	
+	top: calc(14 / 64 * 100%);	
 }
 
 .header__menu-item span:nth-of-type(2) {
-	top:24px;
+	top:calc(24 / 64 * 100%);
 }
 
 .header__menu-item span:nth-of-type(3) {
-	top:34px;
+	top:calc(34 / 64 * 100%);
 }
 
 .header__menu-item span:nth-of-type(4)::after {
 	content:"メニュー";
 	position: absolute;
 	width: 40px;
-	top:40px;
+	top:calc(40 / 64 * 100%);
 	left: 50%;
 	transform: translateX(-50%);
 	color: #fff;
@@ -207,10 +207,14 @@ height: inherit;
 /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
 
 .header__menu-item.active span:nth-of-type(1) {
-    top: 18px;
-		left: 16px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 32px;
+    top: calc(18 / 64 * 100%);
+		left: 50%;
+    transform: translateX(-50%) translateY(7px) rotate(-45deg);
+    width: calc(32 / 64 * 100%);
+
+		@media screen and (max-width:400px) {
+			transform: translateX(-50%) translateY(6px) rotate(-45deg);
+		}
 }
 
 .header__menu-item.active span:nth-of-type(2) {
@@ -218,10 +222,14 @@ height: inherit;
 }
 
 .header__menu-item.active span:nth-of-type(3){
-    top: 30px;
-    left: 16px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 32px;
+    top: calc(30 / 64 * 100%);
+    left: 50%;
+    transform: translateX(-50%) translateY(-7px) rotate(45deg);
+    width: calc(32 / 64 * 100%);
+
+		@media screen and (max-width:400px) {
+			transform: translateX(-50%) translateY(-6px) rotate(45deg);
+		}
 }
 
 /*========= ナビゲーションのためのCSS ===============*/
@@ -230,12 +238,11 @@ height: inherit;
 	position:fixed;
 	z-index: -1;
 	opacity: 0;
-	top: 64px;
+	top: calc(64 / 667 * 100vh);
 	width:100%;
 	height: calc(100vh - 64px);
 	background:$accent-color;
 	transition: all 0.3s;
-	display: none;
 	pointer-events: none;
 }
 
