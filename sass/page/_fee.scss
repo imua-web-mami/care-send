@@ -40,6 +40,12 @@
 		padding: 14px 18px 17px 18px;
 	}
 
+	&:nth-child(3) {
+		@include mq(md) {
+			padding: 14px 16px 17px 16px;
+		}
+	}
+
 	&::before {
 		content: "";
 		background: $accent-color;

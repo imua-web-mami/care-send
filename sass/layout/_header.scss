@@ -2,32 +2,42 @@
 
 .header {
 	width: 100%;
+	height: 96px;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+
+	@include mq(lg) {
+		height: 80px;
+	}
+
+	@include mq(md) {
+		height: 64px;
+	}
 }
 
 .header__nav {
 height: inherit;
+// margin-left: auto;
 
 	@include mq(lg) {
 		display: none;
+	}
+
+	@media screen and (min-width:1600px) {
+		margin-left: auto;
 	}
 }
 
 .header__contents {
 	background: $main-color;
 	width: 100%;
-	height: calc(96 / 850 * 100vh);
+	height: inherit;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 20;
-
-	@include mq(lg) {
-		height: calc(64 / 667 * 100vh);
-	}
+	
 }
 
 .header__logo {
@@ -87,7 +97,6 @@ height: inherit;
 	display: flex;
 	flex-direction: row;
 	height: inherit;
-	width: calc(189 / 1536 * 100%);
 
 	@include mq(lg) {
 		width: auto;
@@ -97,11 +106,14 @@ height: inherit;
 .doc-request-item {
 	background: $accent-color;
 	height: inherit;
-	width: 100%;
-	
+	width: 189px;
+
 	@include mq(lg) {
-		width: calc(64 / 667 * 100vh);
-	  height: calc(64 / 667 * 100vh);
+		width: 80px;
+	}
+
+	@include mq(md) {
+		width: 64px;
 	}
 
 	img {
@@ -111,9 +123,9 @@ height: inherit;
 		margin-right: 7px;
 		vertical-align: middle;
 
-		@include mq(lg) {
-			width: calc(24 / 64 * 100%);
-			height: calc(24 / 64 * 100%);
+		@include mq(md) {
+			width: 24px;
+			height: 24px;
 			margin-right: 0;
 			margin-bottom: 4px;
 			display: block;
@@ -151,13 +163,17 @@ height: inherit;
 	position: relative;
 	background:$text-color;
 	cursor: pointer;
-  width: calc(64 / 667 * 100vh);
-  height: calc(64 / 667 * 100vh);
+  width: 80px;
+  height: inherit;
 	z-index: 20;
 
 	@include mq(lg) {
 		display: block;
 		flex-shrink: 0;
+	}
+
+	@include mq(md) {
+		width: 64px;
 	}
 
 	.menu {
@@ -175,46 +191,58 @@ height: inherit;
     height: 1px;
     border-radius: 5px;
 		background: #fff;
-		width: calc(32 / 64 *100%);
+		width: 32px;
   }
 
 
 .header__menu-item span:nth-of-type(1) {
-	top: calc(14 / 64 * 100%);	
+	top: 21px;	
+
+	@include mq(md) {
+		top: 14px;
+	}
 }
 
 .header__menu-item span:nth-of-type(2) {
-	top:calc(24 / 64 * 100%);
+	top: 31px;
+
+	@include mq(md) {
+		top: 24px;
+	}
 }
 
 .header__menu-item span:nth-of-type(3) {
-	top:calc(34 / 64 * 100%);
+	top: 41px;
+
+	@include mq(md) {
+		top: 34px;
+	}
 }
 
 .header__menu-item span:nth-of-type(4)::after {
 	content:"メニュー";
 	position: absolute;
 	width: 40px;
-	top:calc(40 / 64 * 100%);
+	top: 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	color: #fff;
 	font-size: 10px;
 	line-height: 1;
 	text-transform: uppercase;
+
+	@include mq(md) {
+		top: 40px;
+	}
 }
 
 /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
 
 .header__menu-item.active span:nth-of-type(1) {
-    top: calc(18 / 64 * 100%);
+    top: 18px;
 		left: 50%;
-    transform: translateX(-50%) translateY(7px) rotate(-45deg);
-    width: calc(32 / 64 * 100%);
-
-		@media screen and (max-width:400px) {
-			transform: translateX(-50%) translateY(6px) rotate(-45deg);
-		}
+    transform: translateX(-50%) translateY(6px) rotate(-45deg);
+    width: 32px;
 }
 
 .header__menu-item.active span:nth-of-type(2) {
@@ -222,14 +250,10 @@ height: inherit;
 }
 
 .header__menu-item.active span:nth-of-type(3){
-    top: calc(30 / 64 * 100%);
+    top: 30px;
     left: 50%;
-    transform: translateX(-50%) translateY(-7px) rotate(45deg);
-    width: calc(32 / 64 * 100%);
-
-		@media screen and (max-width:400px) {
-			transform: translateX(-50%) translateY(-6px) rotate(45deg);
-		}
+    transform: translateX(-50%) translateY(-6px) rotate(45deg);
+    width: 32px;
 }
 
 /*========= ナビゲーションのためのCSS ===============*/
@@ -238,12 +262,17 @@ height: inherit;
 	position:fixed;
 	z-index: -1;
 	opacity: 0;
-	top: calc(64 / 667 * 100vh);
+	top: 80px;
 	width:100%;
-	height: calc(100vh - 64px);
+	height: calc(100vh - 80px);
 	background:$accent-color;
 	transition: all 0.3s;
 	pointer-events: none;
+
+	@include mq(md) {
+		top: 64px;
+		height: calc(100vh - 64px);
+	}
 }
 
 .g-nav.panelactive{

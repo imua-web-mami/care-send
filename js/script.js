@@ -1,3 +1,23 @@
+// ヘッダーの高さ分だけコンテンツを下げる
+$(function () {
+  const height = $(".js-header").height();
+  $("main").css("margin-top", height);
+});
+// ページ内スクロール
+$(function () {
+  // ヘッダーの高さ取得
+  const headerHeight = $(".js-header").height();
+  $('a[href^="#"]').click(function () {
+    const speed = 600;
+    let href = $(this).attr("href");
+    let target = $(href == "#" || href == "" ? "html" : href);
+    // ヘッダーの高さ分下げる
+    let position = target.offset().top - headerHeight;
+    $("body,html").animate({ scrollTop: position }, speed, "swing");
+    return false;
+  });
+});
+
 // case スライダー
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -213,17 +233,3 @@ function slideAnime() {
 $(window).scroll(function () {
 	slideAnime();/* アニメーション用の関数を呼ぶ*/
 });// ここまで画面をスクロールをしたら動かしたい場合の記述
-
-
-// スムーススクロール
-
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 500;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
-    return false;
-  });
-});
