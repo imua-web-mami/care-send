@@ -317,10 +317,14 @@
 }
 
 .g-nav li a {
+  height: inherit;
+  width: inherit;
   color: rgb(255, 255, 255);
   padding-left: 16px;
   display: block;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .footer {
@@ -909,7 +913,7 @@
 
 .swiper-button-prev:after {
   content: "";
-  background: url(../img/arrow-01.jpg);
+  background: url(../img/arrow-01.png);
   background-size: contain;
   width: 34px;
   height: 34px;
@@ -917,7 +921,7 @@
 
 .swiper-button-next:after {
   content: "";
-  background: url(../img/arrow-02.jpg);
+  background: url(../img/arrow-02.png);
   background-size: contain;
   width: 34px;
   height: 34px;

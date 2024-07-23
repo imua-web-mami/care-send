@@ -314,8 +314,12 @@ height: inherit;
 }
 
 .g-nav li a{
+	height: inherit;
+	width: inherit;
 	color: $main-color;
 	padding-left:16px;
 	display: block;
 	font-weight: bold;
+	display: flex;
+	align-items: center;
 }
