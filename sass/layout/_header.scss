@@ -18,7 +18,11 @@
 
 .header__nav {
 height: inherit;
-// margin-left: auto;
+margin-left: 237px;
+
+	@media screen and (max-width:1200px) {
+		margin-left: auto;
+	}
 
 	@include mq(lg) {
 		display: none;
@@ -36,7 +40,6 @@ height: inherit;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
 	
 }
 
@@ -45,7 +48,7 @@ height: inherit;
 	height: inherit;
 	margin-left: calc(20 / 1536 * 100%);
 
-	@include mq(lg) {
+	@include mq(md) {
 		width: 139px;
 		height: 32px;
 		padding-left: 16px;
@@ -75,6 +78,10 @@ height: inherit;
 	height: inherit;
 }
 
+.header__nav-item + .header__nav-item {
+	margin-left: 28px;
+}
+
 .header__nav-item a {
 	display: block;
 	color: $accent-color;
@@ -89,14 +96,11 @@ height: inherit;
 	}
 }
 
-.header__nav-item {
-	margin-right: 28px;
-}
-
 .header__contents-list {
 	display: flex;
 	flex-direction: row;
 	height: inherit;
+	margin-left: auto;
 
 	@include mq(lg) {
 		width: auto;
