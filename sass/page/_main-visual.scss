@@ -165,6 +165,10 @@
 
 	span {
 		font-size: 24px;
+
+		@include mq(md) {
+			font-size: 18px;
+		}
 	}
 
 	sup {
