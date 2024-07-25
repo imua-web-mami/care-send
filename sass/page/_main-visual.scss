@@ -47,8 +47,9 @@
 
 	.form-box {
 		margin-left: 14px;
+
 		@media screen and (max-width:1200px) {
-			margin-top: 44px;
+			margin: 44px auto 0;
 		}
 	}
 }
@@ -160,6 +161,10 @@
 			font-size: 18px;
 			margin-top: 18px;
 		}
+	}
+
+	span {
+		font-size: 24px;
 	}
 
 	sup {
