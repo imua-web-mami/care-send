@@ -433,6 +433,7 @@
 }
 @media screen and (max-width: 1200px) {
   .main-visual__contents-box {
+    width: auto;
     height: auto;
     padding-bottom: 189px;
     position: relative;
@@ -495,6 +496,7 @@
 @media screen and (max-width: 1200px) {
   .main-visual__feature-list {
     justify-content: center;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 820px) {

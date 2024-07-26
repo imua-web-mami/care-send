@@ -60,6 +60,7 @@
 	color: $main-color;
 
 	@media screen and (max-width:1200px) {
+		width: auto;
 		height: auto;
 		padding-bottom: 189px;
 		position: relative;
@@ -121,6 +122,7 @@
 
 	@media screen and (max-width:1200px) {
 		justify-content: center;
+		margin-left: 0;
 	}
 
 	@include mq(md) {
