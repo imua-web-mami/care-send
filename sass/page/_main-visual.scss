@@ -24,7 +24,8 @@
 }
 
 .main-visual__wrap {
-	height: calc(100vh - 96px);
+	height: 754px;
+	max-width: 1536px;
 	margin-inline: auto;
 	display: flex;
 	flex-direction: row;
@@ -32,10 +33,9 @@
 	align-items: center;
 	padding: 0 168px 0 192px;
 
-	@media screen and (max-width:1440px) {
+	@media screen and (max-width:1535px) {
+		max-width: 1176px;
 		padding: 0;
-		justify-content: center;
-		gap: 100px;
 	}
 
 	@media screen and (max-width:1200px) {
@@ -46,7 +46,6 @@
 	}
 
 	.form-box {
-		margin-left: 14px;
 
 		@media screen and (max-width:1200px) {
 			margin: 44px auto 0;
@@ -55,6 +54,7 @@
 }
 
 .main-visual__contents-box {
+	width: 615px;
 	height: 586px;
 	line-height: 1.5;
 	color: $main-color;
@@ -118,6 +118,10 @@
 	flex-direction: row;
 	margin-left: 5px;
 	margin-top: 37px;
+
+	@media screen and (max-width:1200px) {
+		justify-content: center;
+	}
 
 	@include mq(md) {
 		gap: 4px;
